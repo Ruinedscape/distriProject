@@ -1,0 +1,18 @@
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css')
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+		script(src="javascripts/help.js")
+
+	body
+	block content
+		include menu
+		h1 Customer Service
+		p Send us a message
+		form(id="helpForm")
+			label(for="message") Message 
+			input(type="text" name="message" id="message" required)
+			button(class="btn" type="submit") Send
+		div(id="container")
